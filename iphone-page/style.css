@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+.container{
+    background: black;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    width: 80%;
+    margin: auto; /*بوسطنها شوية*/
+    padding: 20px 0;
+
+}
+.logo{
+    width: 40px;
+
+}
+
+ul li{
+    display: inline-block;  /* وبتشيب النقط السودا ,هيجيبهم جمب بعض*/
+
+
+}
+ul li a{
+color: #fff;
+text-decoration: none; /*اشيل الخطوط اللي من تحت*/
+margin: 0 10px; /*ابعد كل كلمة عن التانية */
+
+}
+
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto; /*وسطنهم*/
+
+}
+
+.content .text{
+    color: #fff;
+    width: 40%; /*اخر مكان الكتابة بتوصل ليه*/
+
+}
+
+.content .text h2{
+    text-transform: uppercase;
+    font-size: 40px;
+  
+}
+
+.content .text p{
+    font-size: 18px;
+    margin: 20px 0;
+}
+.content .text a{
+    text-decoration: none;
+    background: #fff;
+    color: #000;
+    padding: 8px 15px ;
+    border-radius: 20px;
+}
+
+.content .image{
+
+    width: 30%;
+}
+
+.content .image img{
+    width: 180px;
+}
+
+.icons
+{
+    position: absolute;
+    bottom: 20px;
+    left: 50%; /*علشان اعرف اسنترها*/
+    transform: translateX(-50%);
+}
+
+.icons img{
+    width: 50px ;
+    transition: 0.5s; /*delay*/
+
+}
+
+.icons img:hover{
+    transform: scale(1.2);  /*يعني لو وقفت عليها الاسكيل بتاعي يكبر ب 1.2*/
+}
