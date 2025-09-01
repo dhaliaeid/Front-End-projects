@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background:linear-gradient(#200016,#10001f) ;
+    height: 100vh; /*الطول هيبقى بنفس طول الشاشة ايا كان طولها*/
+    font-family: system-ui; 
+
+}
+
+a{
+    text-decoration: none;  /*remove the underline from links */
+    color: #fff;
+}
+header{
+    position: absolute;  /*to make the stars background behind the  nav par i need to do those three things*/
+    width:95%;
+    z-index: 100;
+    display: flex;  /* بتخلي الهيدر يبقى جمب الليست*/
+    justify-content: space-between; /*عشان احطهم الناحية التانية*/
+    align-items: center; /*نزلت اللوجو لتحت شوية */
+    margin: 30px; 
+}
+
+/*change the class logo shape*/
+header .logo
+{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+/* adjust the space in the ul list */
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center; /*make them in one line*/
+    list-style: none;  /*remove dot list*/
+}
+
+header ul li{
+    margin-right: 30px; /* sperate between them with 30px between each li*/
+
+}
+
+header ul li a{
+    padding: 6px 16px; /* i need this padding to make the button of the nav*/
+    border-radius: 30px;  /* to make the button circular*/
+}
+
+/*hover: when i stand on any button i want the following happen**/
+header ul li a:hover, .active{   /*menstion active class to make the white button always exit*/
+    background:#fff; /*change the background to white*/
+    color: #200016;  /*change the font color to this color*/
+}
+
+/*give the parent position relative*/
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center; /*in center of x axis*/
+    align-items: center;   /*in center of y axis*/
+    overflow: hidden;  /*to make the moon when it move hiddhen*/
+}
+/*here we gonna do the effect of marge the two picture*/
+.main::after
+{
+    content: ''; /* empty content*/
+    position: absolute; /*give it the absolute position so can i control the position */
+    bottom: 0;  /* the position of start*/
+    height: 100px;  /*give it size*/
+    width: 100%;
+    /*make a background and give it a gradirnt with the puruple and empty color , and finaly make this gradient from bottom to top*/
+    background: linear-gradient(to top, #200016,transparent );
+}
+
+/*give to the children absolute position to  that make all the imgs  in one bage*/ 
+.main img{
+    position: absolute;
+    width:100%; /*give the children the same size of the parent*/
+    height: 100vh;
+    object-fit: cover; /*عشان الصورة تبقى مش مضغوطة وتاخد حجم الكافر */
+
+}
+/*add effect screen on the moon picture*/
+#moon{
+    mix-blend-mode: screen;
+    transform: translateY(100px) ;  /*move the moon at the +y to move down*/
+}
+/*to write the noveil word under the moon*/
+.nouvil{
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    transform: translateY(-140px); /*move the nouvil in the -y to move up*/
+}
+
+.content{
+    color: #fff;
+    padding: 30px;
+}
+.content h2{
+    margin:20px;
+    font-size: 20px;
+
+}
+
+.content p{
+     margin:20px;
+}
